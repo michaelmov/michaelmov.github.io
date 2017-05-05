@@ -1,0 +1,31 @@
+footer {
+  position: absolute;
+  height: 50px;
+  width: calc(100% - #{$sidebar-nav-width});
+  left: $sidebar-nav-width;
+  bottom: 0;
+
+  p {
+    font-family: $fontStackLight;
+    text-align: center;
+    color: $light-grey;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+
+
+
+  @include breakpoint(0, $tablet){
+    left: 0;
+    width: 100%;
+    font-size: 12px;
+  }
+
+  @include breakpoint(0, $phone){
+    left: 0;
+    width: 100%;
+    font-size: 10px;
+  }
+
+}

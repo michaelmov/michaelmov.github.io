@@ -1,0 +1,64 @@
+.btn-primary {
+  background: none;
+  color: $primary-blue;
+  border-style: single;
+  border-width: 1px;
+  border-color: $primary-blue;
+
+  &:hover {
+    background: $primary-blue;
+    border-color: $primary-blue;
+    color: $white;
+  }
+
+  &:active {
+    background: $primary-blue;
+    border-color: $primary-blue;
+    color: $white;
+  }
+
+  &:focus {
+    background: $primary-blue;
+    border-color: $primary-blue;
+    color: $white;
+    outline: 0;
+  }
+
+}
+
+.btn-thumbnail {
+  background: none;
+  padding: 20px 30px;
+  color: $white;
+  border-style: single;
+  border-width: 1px;
+  border-color: $white;
+
+
+  &:hover {
+    background: none;
+    color: $white;
+    border-style: single;
+    border-width: 1px;
+    border-color: $white;
+  }
+
+  &:active{
+    background: none;
+    color: $white;
+    border-style: single;
+    border-width: 1px;
+    border-color: $white;
+  }
+
+  &:focus {
+    background: none;
+    color: $white;
+    border-style: single;
+    border-width: 1px;
+    border-color: $white;
+    outline: 0;
+  }
+
+}
+

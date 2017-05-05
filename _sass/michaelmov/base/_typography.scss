@@ -1,0 +1,82 @@
+body {
+  font-family: $fontStackLight;
+  font-size: 16px;
+  color: $dark-grey;
+}
+
+strong {
+  font-family: $fontStackBold;
+}
+
+h1, h2 {
+  font-family: $fontStackBold;
+  margin: 10px 0 15px 0;
+}
+
+h3, h4, h5, h6 {
+  font-family: $fontStackLight;
+}
+
+
+h1 {
+  font-size: 55px;
+
+  @include breakpoint(0, $phone) {
+    font-size: 30px;
+    margin: 10px 0 7px 0;
+  }
+}
+
+h2 {
+  font-size: 34px;
+
+  @include breakpoint(0, $phone) {
+    font-size: 30px;
+    margin: 10px 0 7px 0;
+  }
+}
+
+h3 {
+  font-size: 36px;
+
+  @include breakpoint(0, $phone) {
+    font-size: 24px;
+  }
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+
+a {
+  color: $primary-blue;
+
+  &:hover {
+    color: $primary-blue-light;
+    text-decoration: none;
+  }
+
+  &:active {
+    color: $primary-blue-light;
+    text-decoration: none;
+  }
+}
+
+blockquote {
+  font-size: 20px;
+  text-align: center;
+  font-style: italic;
+  padding: 0 40px 0 40px;
+  margin: 40px 0  ;
+  color: $light-grey;
+  border-color: $primary-blue;
+}

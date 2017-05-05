@@ -1,0 +1,51 @@
+html {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+}
+
+.page-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+
+.page-content-wrapper {
+  display: block;
+  position: relative;
+  left: 0;
+  height: 100%;
+  margin-left: $sidebar-nav-width;
+  transition: all 0.4s ease;
+  margin-bottom: 50px;
+
+
+  .container-fluid {
+    position: relative;
+  }
+
+  .inner-wrap {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 65px 40px 100px 40px;
+  }
+
+
+  @include breakpoint(0, $tablet) {
+    margin-left: 0;
+  }
+
+
+  @include breakpoint($tablet, 0) {
+    left: 0 !important;
+  }
+
+}
+
+
+
+

@@ -1,0 +1,105 @@
+/*** Navbar (mobile only) ***/
+.navbar {
+  display: none;
+  text-align: center;
+  overflow-x: hidden;
+  background: $primary-blue;
+  transition: all 0.4s ease;
+
+  h4 {
+    font-size: 14px;
+    font-family: $fontStackBold;
+    color: $white;
+    text-transform: uppercase;
+    line-height: 50px;
+    margin: 0;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.2);
+    transition: margin 0.4s ease;
+  }
+
+  @include breakpoint(0, $tablet){
+    display: block;
+  }
+}
+
+/*** Hamburger menu animation ***/
+#hamburger {
+  width: 32px;
+  height: 25px;
+  top: 14px;
+  position: relative;
+  float: left;
+  margin: 0 auto;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+
+  span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: $white;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+
+    &:nth-child(1) {
+      top: 0;
+    }
+    &:nth-child(2) {
+      top: 10px;
+    }
+    &:nth-child(3) {
+      top: 10px;
+    }
+    &:nth-child(3) {
+      top: 20px;
+    }
+  }
+
+}
+
+#hamburger.open {
+  span {
+    &:nth-child(2) {
+      top: 10px;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+    &:nth-child(3) {
+      top: 10px;
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+    &:nth-child(4) {
+      top: 0;
+      width: 0;
+      left: 50%;
+    }
+
+    &:nth-child(1) {
+      top: 0;
+      width: 0;
+      left: 50%;
+    }
+  }
+}
