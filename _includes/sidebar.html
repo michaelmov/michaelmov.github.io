@@ -5,7 +5,15 @@
             <h1 class="site-title">{{ site.title }}</h1>
             <h2 class="site-description">{{ site.subtitle }}</h2>
             <nav class="sidebar-nav">
-                <!--<?php wp_nav_menu( array( 'theme_location' => 'sidebar-nav' ) ); ?> -->
+                <div>
+                    <ul>
+                        {% for item in site.data.navigation.main_navigation%}
+                        <li class="{% if item.url == page.url %}current-menu-item{% endif %}">
+                            <a href="{{site.url}}{{ item.url }}">{{ item.title }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
             </nav>
         </div>
     </div>
