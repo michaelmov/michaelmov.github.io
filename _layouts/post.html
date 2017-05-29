@@ -35,7 +35,7 @@ layout: default
       <div class="post-content">
         {{ content }}
       </div>
-      <?php comments_template(); ?>
+      {% include disqus_comments.html %}
     </article>
   </div>
 </div>

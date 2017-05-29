@@ -3,6 +3,7 @@ layout: post
 title:  "CSS is More Awesome with SASS"
 date:   2016-02-06
 categories: frontend css sass
+comments: true
 ---
 
 If you are web designer or developer one of the buzzwords you hear almost daily is CSS-Preprocessors. Sounds complicated doesn’t it? In fact, many web professionals (including myself) are reluctant to try a CSS pre-processor when it is suggested to us. We say things like “I’m really good at writing CSS, I don’t need help!” or “ I don’t need to introduce another complexity into my workflow”. The truth is that if you already know how to write CSS, you will feel right at home creating your stylesheets with a CSS pre-processor like SASS, LESS, or Stylus. In this article, I will focus on SASS specifically, and share with you a few of the reasons why I switched to using SASS for all of my web projects. Getting started with SASS is easy, and you can integrate it into your workflow immediately. Once you learn what SASS is capable of, you will wonder how you ever wrote your CSS without it.
