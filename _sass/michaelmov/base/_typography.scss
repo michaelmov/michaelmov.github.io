@@ -1,20 +1,22 @@
 body {
-  font-family: $fontStackLight;
+  font-family: $fontStack;
+  font-weight: 400;
   font-size: 16px;
-  color: $dark-grey;
+  color: $medium-grey;
+  line-height: 2;
 }
 
 strong {
-  font-family: $fontStackBold;
+  font-weight: 700;
 }
 
 h1, h2 {
-  font-family: $fontStackBold;
+  font-weight: 700;
   margin: 10px 0 15px 0;
 }
 
 h3, h4, h5, h6 {
-  font-family: $fontStackLight;
+  font-weight: 300;
 }
 
 

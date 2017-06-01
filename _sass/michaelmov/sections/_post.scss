@@ -2,7 +2,6 @@
 
 .post-meta {
   color: $light-grey;
-  font-family: $fontStackLight;
   text-transform: uppercase;
 
   @include breakpoint(0, $phone) {
@@ -12,7 +11,6 @@
 }
 .post-content {
   padding: 40px 0;
-  font-family: $fontStackLight;
   color: $medium-grey;
 
   @include breakpoint(0, $phone) {
@@ -44,11 +42,9 @@
 
 
   h2 {
-    font-family: $fontStackBold;
-
     a {
       text-decoration: none;
-      color: $dark-grey;
+      color: $medium-grey;
 
       &:hover {
         color: $primary-blue;
@@ -68,8 +64,6 @@
 
 .post {
   h1 {
-    font-family: $fontStackBold;
-
     a {
       text-decoration: none;
       color: $dark-grey;

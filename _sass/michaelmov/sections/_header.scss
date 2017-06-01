@@ -9,7 +9,6 @@
   }
 
   .page-header-title {
-    font-family: $fontStackMedium;
     font-size: 18px;
 
     @include breakpoint(0, $phone) {

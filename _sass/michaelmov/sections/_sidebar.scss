@@ -57,7 +57,6 @@
 
       .site-title {
         font-size: 18px;
-        font-family: $fontStackBold;
         color: inherit;
         text-transform: uppercase;
         margin: 20px 0 0 0;
@@ -73,8 +72,8 @@
       }
 
       .site-description {
-        font-family: $fontStackLight;
         font-size: 12px;
+        font-weight: 300;
         margin: 4px 0 10px 0;
         color: inherit;
         text-transform: uppercase;

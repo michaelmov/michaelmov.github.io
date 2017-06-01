@@ -2,4 +2,23 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-@import "michaelmov";
+// Utilities
+@import 'michaelmov/utilities/mixins';
+
+
+// Base
+@import 'michaelmov/base/variables',
+'michaelmov/base/typography',
+'michaelmov/base/syntax-highlighting',
+'michaelmov/base/buttons',
+'michaelmov/base/layout';
+
+// Sections
+@import 'michaelmov/sections/navbar-mobile',
+'michaelmov/sections/sidebar',
+'michaelmov/sections/header',
+'michaelmov/sections/post',
+'michaelmov/sections/page',
+'michaelmov/sections/portfolio',
+'michaelmov/sections/single-portfolio',
+'michaelmov/sections/footer';

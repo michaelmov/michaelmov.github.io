@@ -33,6 +33,8 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+sass:
+  sass_dir: _sass
 permalink: /articles/:title
 paginate: 3
 defaults:
