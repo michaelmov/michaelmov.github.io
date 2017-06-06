@@ -2,53 +2,8 @@
 layout: default
 ---
 
-<!--<div class="home">-->
-
-  <!--<h1 class="page-heading">Posts</h1>-->
-  <!---->
-  <!--{{ content }}-->
-
-  <!--<ul class="post-list">-->
-    <!--{% for post in site.posts %}-->
-      <!--<li>-->
-        <!--{% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}-->
-        <!--<span class="post-meta">{{ post.date | date: date_format }}</span>-->
-
-        <!--<h2>-->
-          <!--<a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>-->
-        <!--</h2>-->
-      <!--</li>-->
-    <!--{% endfor %}-->
-  <!--</ul>-->
-
-  <!--<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>-->
-
-<!--</div>-->
-
 <div class="container-fluid">
   <div class="inner-wrap">
-    <div class="page-header">
-      <h3 class="page-header-title">Recent Articles</h3>
-    </div>
-    {% for post in site.posts %}
-    <article class="recent-articles">
-      <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
-      <div class="post-meta">
-        <time>{{ post.date | date: date_format }}</time>
-      </div>
-      <div class="post-content">
-        {{ post.excerpt }}<a href="{{ post.url | relative_url }}">Read More</a>
-      </div>
-    </article>
-    {% endfor %}
-    <nav class="prev-next-posts">
-      <div class="next-posts-link text-left">
-        <?php previous_posts_link( 'Newer Articles' ); ?>
-      </div>
-      <div class="prev-posts-link text-right">
-        <?php next_posts_link( 'Older Articles'); ?>
-      </div>
-    </nav>
-    <?php endif; ?>
+
   </div>
 </div>

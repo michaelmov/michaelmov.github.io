@@ -174,9 +174,20 @@
   }
 
   @include breakpoint($tablet, 0){
-    width: $sidebar-nav-width !important;
+    width: $sidebar-nav-width;
   }
 
+}
+
+.sidebar-full-width {
+  width: 100%;
+
+  @include breakpoint(0, $tablet){
+    margin-left: 0;
+  }
+  @include breakpoint($tablet, 0){
+    width: 100%;
+  }
 }
 
 
