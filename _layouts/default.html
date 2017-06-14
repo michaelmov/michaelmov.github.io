@@ -4,17 +4,20 @@
   {% include head.html %}
 
   <body>
-    <div class="page-wrapper">
+    <div class="page-wrapper m-scene" id="main">
       {% include sidebar.html %}
       <main class="page-content-wrapper">
         {% include navbar-mobile.html %}
-        {{ content }}
+        <div class="container-fluid">
+          {{ content }}
+        </div>
       </main>
     </div>
 
     {% include footer.html %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="{{ '/assets/js/jquery.history.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/jquery.smoothstate.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/michaelmov.js' | relative_url }}"></script>
   </body>
 </html>

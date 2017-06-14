@@ -4,29 +4,34 @@
 
 $(document).ready(function(){
 
-    var pathname = window.location.pathname;
+    'use strict';
 
-    ajaxify();
+    var $page = $('#main'),
+        options = {
+            debug: true,
+            prefetch: true,
+            cacheLength: 4,
+            onStart: {
+                duration: 350, // Duration of our animation
+                render: function ($container) {
+                    // Add your CSS animation reversing class
+                    $container.addClass('is-exiting');
+                    // Restart your animation
+                    smoothState.restartCSSAnimations();
+                }
+            },
+            onReady: {
+                duration: 0,
+                render: function ($container, $newContent) {
+                    // Remove your CSS animation reversing class
+                    $container.removeClass('is-exiting');
+                    // Inject the new content
+                    $container.html($newContent);
+                }
+            }
+        },
+        smoothState = $page.smoothState(options).data('smoothState');
 
-    if(pathname !== '/') {
-        $('.sidebar').removeClass('sidebar-full-width');
-        $('footer').removeClass('hidden');
-    }
-
-
-    $('.sidebar-nav a').click(function() {
-       $('.sidebar').removeClass('sidebar-full-width');
-       $('footer').removeClass('hidden');
-       $('body').removeClass('js-sidebar-open');
-    });
-
-    $('.avatar').click(function() {
-        $('.sidebar').addClass('sidebar-full-width');
-        $('footer').addClass('hidden');
-    });
-
-
-    // Toggle sidebar navigation on mobile.
     $('#hamburger').click(function(){
 
         $('#hamburger').toggleClass('open');
@@ -55,29 +60,5 @@ $(document).ready(function(){
         }
     });
 
-
-    function ajaxify() {
-        var siteUrl = 'http://'+(document.location.hostname||document.location.host);
-
-        //	Catch all internally-focused links and push a new state.
-        //	Note: External links will not be affected by this behavior.
-        $(document).delegate('a[href^="/"],a[href^="'+siteUrl+'"]', "click", function(e) {
-            e.preventDefault();
-            History.pushState({}, "", this.pathname);
-        });
-
-        History.Adapter.bind(window, 'statechange', function(){
-            var state = History.getState();
-            $.get(state.url, function(data){	// Use AJAX to get the new content.
-                document.title = data.match(/<title>(.*?)<\/title>/)[1];
-                $('.inner-wrap').parent().html($(data).find('.inner-wrap')); 	// Pull the post we want out of the .content class.
-                // If you change the class of the post container,
-                // you must change it here!!!
-                // _gaq.push(['_trackPageview', state.url]);	// This updates Google Analytics with a visit to the new page.
-                // If you don't use Google Analytics, you can safety comment or
-                // remove that line.
-            });
-        });
-    }
 
 });

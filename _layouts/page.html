@@ -1,14 +1,13 @@
 ---
 layout: default
 ---
-<div class="container-fluid">
-  <div class="inner-wrap">
-    <article class="post">
-      <h2>{{ page.title | escape }}</h2>
-      <div class="post-content">
-        {{ content }}
-      </div>
-      <?php comments_template(); ?>
-    </article>
-  </div>
+
+<div class="inner-wrap scene_element scene_element--fadeinfromright">
+  <article class="post">
+    <h2>{{ page.title | escape }}</h2>
+    <div class="post-content">
+      {{ content }}
+    </div>
+    <?php comments_template(); ?>
+  </article>
 </div>

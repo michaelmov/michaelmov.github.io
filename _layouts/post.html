@@ -2,17 +2,15 @@
 layout: default
 ---
 
-<div class="container-fluid">
-  <div class="inner-wrap">
-    <article class="post">
-      <h2>{{ page.title | escape }}</h2>
-      <div class="post-meta">
-        <time>{{ page.date | date: '%B %d, %Y' }}</time>
-      </div>
-      <div class="post-content">
-        {{ content }}
-      </div>
-      {% include disqus_comments.html %}
-    </article>
-  </div>
+<div class="inner-wrap scene_element scene_element--fadein">
+  <article class="post">
+    <h2>{{ page.title | escape }}</h2>
+    <div class="post-meta">
+      <time>{{ page.date | date: '%B %d, %Y' }}</time>
+    </div>
+    <div class="post-content">
+      {{ content }}
+    </div>
+    {% include disqus_comments.html %}
+  </article>
 </div>

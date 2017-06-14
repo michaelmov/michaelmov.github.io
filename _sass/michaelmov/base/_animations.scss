@@ -1,0 +1,61 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInFromRight {
+  0% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes width {
+  0% {
+    width: $sidebar-nav-width;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+
+
+.m-scene {
+  /** Basic styles for an animated element */
+  .scene_element {
+    animation-duration: 0.25s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both;
+
+  }
+
+  /** An element that fades in */
+  .scene_element--fadein {
+    animation-name: fadeIn;
+  }
+
+
+
+  /** An element that fades in and slides from the right */
+  .scene_element--fadeinfromright {
+    animation-name: fadeInFromRight;
+  }
+
+  /** Reverse "exit" animations */
+  &.is-exiting {
+    .scene_element {
+      animation-direction: alternate-reverse;
+    }
+  }
+}
