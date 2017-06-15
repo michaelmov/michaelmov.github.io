@@ -32,14 +32,19 @@
       -o-transform: translateY(-50%);
 
 
-      .avatar {
-        width: 100px;
-        height: auto;
-        border-radius: 100px;
-        box-shadow: 0 0 0 6px rgba(255,255,255,.3);
-        -webkit-box-shadow: 0 0 0 6px rgba(255,255,255,.3);
-        -moz-box-shadow: 0 0 0 6px rgba(255,255,255,.3);
-        -o-box-shadow: 0 0 0 6px rgba(255,255,255,.3);
+      .avatar { 
+        
+        img {
+          display: block;
+          margin: 0 auto;
+          width: 100px;
+          height: 100px;
+          border-radius: 100px;
+          box-shadow: 0 0 0 6px rgba(255,255,255,.3);
+          -webkit-box-shadow: 0 0 0 6px rgba(255,255,255,.3);
+          -moz-box-shadow: 0 0 0 6px rgba(255,255,255,.3);
+          -o-box-shadow: 0 0 0 6px rgba(255,255,255,.3);
+        }
 
         @include breakpoint(0, $tablet) {
           width: 80px;
@@ -52,7 +57,6 @@
         @media (max-height: 400px) {
           display: none;
         }
-
       }
 
       .site-title {
