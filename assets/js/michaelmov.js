@@ -5,8 +5,9 @@
 $(document).ready(function(){
 
     'use strict';
+    bindClickEvents();
 
-    var $page = $('#main'),
+    var page = $('#main'),
         options = {
             debug: true,
             prefetch: true,
@@ -28,15 +29,13 @@ $(document).ready(function(){
                     // Inject the new content
                     $container.html($newContent);
                 }
+            },
+            onAfter: function ($container, $newContent) {
+                bindClickEvents();
             }
         },
-        smoothState = $page.smoothState(options).data('smoothState');
+        smoothState = page.smoothState(options).data('smoothState');
 
-    $('#hamburger').click(function(){
-
-        $('#hamburger').toggleClass('open');
-        $('body').toggleClass('js-sidebar-open');
-    });
 
 
     // Close sidebar navigation on vertical scroll.
@@ -59,6 +58,15 @@ $(document).ready(function(){
             $('body').removeClass('js-sidebar-open');
         }
     });
+
+    function bindClickEvents() {
+        var hamburger = $('#hamburger');
+
+        $(hamburger).click(function(){
+            hamburger.toggleClass('open');
+            $('body').toggleClass('js-sidebar-open');
+        });
+    }
 
 
 });

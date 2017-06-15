@@ -40,9 +40,14 @@
 
   }
 
+
   /** An element that fades in */
   .scene_element--fadein {
     animation-name: fadeIn;
+  }
+
+  .scene_element--width {
+    animation-name: width;
   }
 
 

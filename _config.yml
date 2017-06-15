@@ -30,6 +30,7 @@ highlighter: rouge
 gems:
   - jekyll-feed
   - jekyll-paginate
+  - octopress-autoprefixer
 exclude:
   - Gemfile
   - Gemfile.lock

@@ -3,7 +3,10 @@ GEM
   specs:
     addressable (2.5.1)
       public_suffix (~> 2.0, >= 2.0.2)
+    autoprefixer-rails (7.1.1.2)
+      execjs
     colorator (1.1.0)
+    execjs (2.7.0)
     ffi (1.9.18)
     forwardable-extended (2.6.0)
     jekyll (3.4.3)
@@ -30,6 +33,9 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
     mercenary (0.3.6)
+    octopress-autoprefixer (2.0.0)
+      autoprefixer-rails
+      jekyll (~> 3.0)
     pathutil (0.14.0)
       forwardable-extended (~> 2.6)
     public_suffix (2.0.5)
@@ -47,6 +53,7 @@ DEPENDENCIES
   jekyll (= 3.4.3)
   jekyll-feed (~> 0.6)
   jekyll-paginate
+  octopress-autoprefixer
   tzinfo-data
 
 RUBY VERSION
