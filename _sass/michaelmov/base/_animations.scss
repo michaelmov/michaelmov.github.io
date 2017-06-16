@@ -36,7 +36,7 @@
   .scene_element {
     animation-duration: 0.25s;
     transition-timing-function: ease-in;
-    animation-fill-mode: both;
+    animation-fill-mode: forwards;
 
   }
 

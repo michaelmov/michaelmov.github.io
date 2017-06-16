@@ -12,6 +12,8 @@ $(document).ready(function(){
 
     bindClickEvents();
 
+
+
     // Close sidebar navigation on vertical scroll.
     $(window).scroll(function(){
         if($(window).scrollTop() >= 100) {
@@ -22,13 +24,14 @@ $(document).ready(function(){
 
     function bindClickEvents() {
 
-        $(hamburger).on('click', function() {
+        hamburger.on('click', function() {
             hamburger.toggleClass('open');
             $('body').toggleClass('js-sidebar-open');
         });
 
-        $(link).on('click', function() {
+        link.on('click', function() {
             closeSidebar();
+            sidebar.addClass('scene_element--width');
         });
 
         // Close sidebar navigation when touching outside of the sidebar container on mobile devices.
@@ -38,7 +41,7 @@ $(document).ready(function(){
     }
 
     function closeSidebar() {
-        $(hamburger).removeClass('open');
+        hamburger.removeClass('open');
         $('body').removeClass('js-sidebar-open');
     }
 });
