@@ -19,16 +19,9 @@ $(document).ready(function(){
         }
     });
 
-    // Close sidebar navigation when touching outside of the sidebar container on mobile devices.
-    $(document).on('touchstart', function (e) {
-        if (!sidebar.is(e.target) // if the target of the click isn't the container...
-            && sidebar.has(e.target).length === 0) // ... nor a descendant of the container
-        {
-            closeSidebar();
-        }
-    });
 
     function bindClickEvents() {
+
         $(hamburger).on('click', function() {
             hamburger.toggleClass('open');
             $('body').toggleClass('js-sidebar-open');
@@ -36,15 +29,18 @@ $(document).ready(function(){
 
         $(link).on('click', function() {
             closeSidebar();
-        })
+        });
+
+        // Close sidebar navigation when touching outside of the sidebar container on mobile devices.
+        $('.page-content-wrapper').on('touchstart', function (e) {
+          closeSidebar();
+        });
     }
 
     function closeSidebar() {
         $(hamburger).removeClass('open');
         $('body').removeClass('js-sidebar-open');
     }
-
-
 });
 
 
@@ -70,10 +66,7 @@ var page = $('#main'),
                 // Inject the new content
                 $container.html($newContent);
             }
-        },
-        onAfter: function ($container, $newContent) {
-            bindClickEvents();
         }
     },
 
-    smoothState = page.smoothState(options).data('smoothState');
+smoothState = page.smoothState(options).data('smoothState');
