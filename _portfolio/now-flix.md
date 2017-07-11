@@ -8,4 +8,4 @@ live: "https://michaelmov.github.io/NowFlix"
 source: "https://github.com/michaelmov/NowFlix"
 ---
 
-An simple AngularJS web app to consume TheMovieDB API and retrieve movie info and trailers. The goal of the project was to learn how to use ES6 with AngularJS and the Angular Material UI framework.
+A simple AngularJS web app to consume TheMovieDB API and retrieve movie info and trailers. The goal of the project was to learn how to use ES6 with AngularJS and the Angular Material UI framework.
