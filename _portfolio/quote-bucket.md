@@ -2,7 +2,7 @@
 layout: post
 title:  "QuoteBucket"
 thumbnail: "assets/images/quote-bucket.png"
-categories: AngularJS Express SCSS Bootstrap Grunt
+categories: [AngularJS, Express, SCSS, Bootstrap, Grunt]
 comments: false
 live: "http://quotebucket.michaelmovsesov.com/app"
 source: "https://github.com/michaelmov/QuoteBucket"

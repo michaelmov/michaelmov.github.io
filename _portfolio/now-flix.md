@@ -2,7 +2,7 @@
 layout: post
 title:  "NowFlix"
 thumbnail: "assets/images/now-flix.png"
-categories: angularjs scss webpack es6 angular-material
+categories: [angularjs, scss, webpack, es6, angular material]
 comments: false
 live: "https://michaelmov.github.io/NowFlix"
 source: "https://github.com/michaelmov/NowFlix"
