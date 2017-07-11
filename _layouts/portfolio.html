@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<div class="inner-wrap scene_element scene_element--fadein">
+    <div class="page-header">
+        <h3 class="page-header-title">Portfolio</h3>
+    </div>
+    {% for project in site.portfolio %}
+    <article class="projects">
+        <div class="row">
+            <div class="col-md-5">
+                <img class="project-thumbnail" src="{{ site.url }}/{{ project.thumbnail }}" alt="">
+                <a href="{{ project.live }}" target="_blank"><i class="fa fa-globe"></i> Live</a> |
+                <a href="{{ project.source }}" target="_blank"><i class="fa fa-github"></i> Source Code</a>
+            </div>
+            <div class="col-md-7">
+                <h2>{{ project.title | escape }}</h2>
+                <div class="project-meta">
+                    {% for category in project.categories %}
+                    <!--<time>{{ project.date | date: '%B %d, %Y' }}</time>-->
+                    {{ category }},
+                    {% endfor %}
+                </div>
+                <div class="project-content">
+                    {{ project.content }}
+                </div>
+            </div>
+        </div>
+    </article>
+    {% endfor %}
+</div>

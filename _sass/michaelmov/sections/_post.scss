@@ -9,8 +9,10 @@
   }
 
 }
+
+
 .post-content {
-  padding: 40px 0;
+  padding: 20px 0 0 0;
   color: $medium-grey;
 
   @include breakpoint(0, $phone) {
@@ -33,7 +35,7 @@
 /*** Recent Articles ***/
 
 .recent-articles {
-  padding: 40px 0;
+  padding: 20px 0;
   border-bottom: 1px solid $light-grey;
 
   @include breakpoint(0, $phone) {

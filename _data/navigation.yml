@@ -1,7 +1,9 @@
 main_navigation:
-
 - title: Articles
   url: /articles/
+
+- title: Portfolio
+  url: /portfolio/
 
 - title: About
   url: /about/
