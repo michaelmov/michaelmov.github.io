@@ -80,6 +80,49 @@ var Site = {
 
 $(document).ready(function () {
    Site.init();
+
+   var sr = ScrollReveal();
+   if(window.location.pathname === '/') {
+       sr.reveal('.avatar', { 
+           duration: 800, 
+           scale: 1,
+           origin: 'left',
+           distance: '30px'
+        });
+
+       sr.reveal('.site-title', { 
+           duration: 800, 
+           scale: 1,
+           origin: 'left',
+           distance: '30px',
+           delay: 300
+        });
+
+       sr.reveal('.site-description', { 
+           duration: 800, 
+           scale: 1,
+           origin: 'left',
+           distance: '30px',
+           delay: 300
+        });
+
+       sr.reveal('.sidebar-nav ul li', { 
+           duration: 1200, 
+           scale: 1,
+           origin: 'left',
+           distance: '30px',
+           delay: 300
+        }, 100);
+
+       sr.reveal('.social-nav a', { 
+           duration: 1200, 
+           scale: 1,
+           origin: 'bottom',
+           distance: '30px',
+           delay: 300
+        }, 100);
+   }
+   
 });
 
 
