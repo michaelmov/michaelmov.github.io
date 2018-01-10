@@ -36,7 +36,6 @@
 
 .recent-articles {
   padding: 20px 0;
-  border-bottom: 1px solid $light-grey;
 
   @include breakpoint(0, $phone) {
     padding: 25px 0;
