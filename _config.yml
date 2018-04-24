@@ -23,6 +23,7 @@ twitter_username: jekyllrb
 github_username:  jekyll
 disqus:
   shortname: michaelmovsesov
+google_analytics: UA-74351809-1
 
 # Build settings
 markdown: kramdown
