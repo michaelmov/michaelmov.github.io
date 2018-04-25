@@ -24,6 +24,7 @@ github_username:  jekyll
 disqus:
   shortname: michaelmovsesov
 google_analytics: UA-74351809-1
+google_tag_manager: GTM-M3842PX
 
 # Build settings
 markdown: kramdown

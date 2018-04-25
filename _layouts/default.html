@@ -4,6 +4,12 @@
   {% include head.html %}
 
   <body>
+    {% if jekyll.environment == 'production' and site.google_analytics %}
+      <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.google_tag_manager }}"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+    {% endif %}
     <div class="page-wrapper m-scene" id="main">
       {% include sidebar.html %}
       <main class="page-content-wrapper">
