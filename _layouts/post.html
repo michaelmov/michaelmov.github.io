@@ -1,6 +1,14 @@
 ---
 layout: default
 ---
+<script>
+  var categoryArray = [];
+  {% for category in page.categories %}
+   categoryArray.push("{{ category }}");
+  {% endfor %}
+
+  var articleCategories = categoryArray.join(' | ');
+</script>
 
 <div class="inner-wrap scene_element scene_element--fadein">
   <article class="post">
