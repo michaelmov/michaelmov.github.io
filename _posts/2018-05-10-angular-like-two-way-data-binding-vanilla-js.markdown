@@ -63,6 +63,8 @@ function init() {
         }
     }
 };
+
+...
 ```
 A few notes about the `init` function:
 * This function loops through all input fields with the custom `mm-model` attribute, and attaches a `keyup` event listener to them.
@@ -103,6 +105,8 @@ function setPropUpdateLogic(prop) {
         })
     }
 };
+
+...
 ```
 Key notes about `setPropUpdateLogic`:
 * First, I receive the prop as a parameter and check for its existence in `scope`. Then, I define the logic that handles changes to the prop by passing an object with a `set` function to `Object.defineProperty()`. 
