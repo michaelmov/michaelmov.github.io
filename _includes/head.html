@@ -16,33 +16,7 @@
   {% else %}
     <meta content="website" property="og:type">
   {% endif %}
-  {% if page.description %}
-    <meta content="{{ page.description }}" property="og:description">
-  {% else %}
-    <meta content="{{ site.description }}" property="og:description">
-  {% endif %}
-  {% if page.url %}
-    <meta content="{{ site.url }}{{ page.url }}" property="og:url">
-  {% endif %}
-  {% if page.date %}
-    <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
-    <meta content="{{ site.url }}/about/" property="article:author">
-  {% endif %}
-  {% if page.image %}
-    <meta content="/img/srcset/{{ page.image }}" property="og:image">
-  {% else %}
-    <meta content="/img/logo-high-resolution.png" property="og:image">
-  {% endif %}
-  {% if page.categories %}
-    {% for category in page.categories limit:1 %}
-    <meta content="{{ category }}" property="article:section">
-    {% endfor %}
-  {% endif %}
-  {% if page.tags %}
-    {% for tag in page.tags %}
-    <meta content="{{ tag }}" property="article:tag">
-    {% endfor %}
-  {% endif %}
+
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
