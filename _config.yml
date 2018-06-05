@@ -30,8 +30,6 @@ google_tag_manager: GTM-M3842PX
 markdown: kramdown
 highlighter: rouge
 gems:
-  - jekyll-feed
-  - jekyll-paginate
   - octopress-autoprefixer
 exclude:
   - Gemfile
@@ -39,7 +37,6 @@ exclude:
 sass:
   sass_dir: _sass
 permalink: /articles/:title
-paginate: 3
 defaults:
   - scope:
       path: "assets/images"
