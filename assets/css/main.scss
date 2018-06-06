@@ -1,0 +1,25 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+// Utilities
+@import 'utilities/mixins';
+
+
+// Base
+@import 'base/variables',
+'base/typography',
+'base/syntax-highlighting',
+'base/buttons',
+'base/animations',
+'base/layout';
+
+// Sections
+@import 'sections/navbar-mobile',
+'sections/sidebar',
+'sections/header',
+'sections/post',
+'sections/page',
+'sections/portfolio',
+'sections/single-portfolio',
+'sections/footer';

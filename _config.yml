@@ -28,20 +28,22 @@ google_tag_manager: GTM-M3842PX
 
 # Build settings
 markdown: kramdown
-highlighter: rouge
-gems:
-  - octopress-autoprefixer
-exclude:
-  - Gemfile
-  - Gemfile.lock
-sass:
-  sass_dir: _sass
 permalink: /articles/:title
-defaults:
-  - scope:
-      path: "assets/images"
-    values:
-      image: true
 collections:
   portfolio:
     output: true
+# theme: minima
+plugins:
+  - jekyll-feed
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
