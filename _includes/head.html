@@ -28,5 +28,7 @@
   {% if jekyll.environment == 'production' and site.google_analytics %}
     {% include google-analytics.html %}
   {% endif %}
-  <!-- <script src="{{ '/assets/js/michaelmov.js' | relative_url }}"></script> -->
+  {% if page.url contains '/articles/' %}
+  <script src="{{ '/assets/js/article.js' | relative_url }}"></script>
+  {% endif %}
 </head>
