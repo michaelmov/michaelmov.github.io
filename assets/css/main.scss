@@ -1,0 +1,33 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "base/_fonts",
+        "base/_variables-custom";
+
+
+// Bootstrap core
+@import "bootstrap/functions",
+        "bootstrap/variables",
+        "bootstrap/mixins",
+        "bootstrap/utilities",
+        "bootstrap/reboot";
+
+
+// Bootstrap components
+@import "bootstrap/grid",
+        "bootstrap/type";
+
+// Base
+@import "base/_typography",
+        "base/_syntax-highlighting",
+        "base/_layout";
+
+// Modules
+@import "modules/_article-card";
+@import "modules/_footer";
+
+// Layout
+@import "layout/_home",
+        "layout/_article";
+

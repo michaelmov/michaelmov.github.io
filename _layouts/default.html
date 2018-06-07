@@ -10,16 +10,7 @@
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- End Google Tag Manager (noscript) -->
     {% endif %}
-    <div class="page-wrapper m-scene" id="main">
-      {% include sidebar.html %}
-      <main class="page-content-wrapper">
-        {% include navbar-mobile.html %}
-        <div class="container-fluid">
-          {{ content }}
-        </div>
-      </main>
-      <script src="{{ '/assets/js/michaelmov.js' | relative_url }}"></script>
-      {% include footer.html %}
-    </div>
+    {{ content }}
+    {% include footer.html %}
   </body>
 </html>

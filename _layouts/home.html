@@ -2,6 +2,49 @@
 layout: default
 ---
 
-<div class="inner-wrap scene_element scene_element--fadein">
-
-</div>
+<header class="home__hero d-flex align-items-center text-white">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 d-flex justify-content-center my-1">
+                <a href="/" class="d-block">
+                    <div class="home__hero-avatar" style="background-image: url({{site.url}}/assets/images/michael_movsesov_avatar.jpeg)"></div>
+                </a>
+            </div>
+            <div class="col d-flex my-1 justify-content-center align-items-center align-items-md-start flex-column">
+                <h1 class="home__hero-title h3 mb-1">{{ site.title }}</h1>
+                <h2 class="home__hero-subtitle h6 text-uppercase mb-2">{{ site.subtitle }}</h2>
+                <div class="home__hero-social">
+                    <a href="https://github.com/michaelmov" target="_blank"><i class="fab fa-github"></i></a> 
+                    <a href="https://codepen.io/michaelmov/" target="_blank"><i class="fab fa-codepen"></i></a> 
+                    <a href="https://www.linkedin.com/in/michaelmov" target="_blank"><i class="fab fa-linkedin"></i></a> 
+                    <a href="https://twitter.com/MichaelMov" target="_blank"><i class="fab fa-twitter"></i></a> 
+                    <a href="mailto:michael.movsesov@gmail.com" target="_blank"><i class="far fa-envelope"></i></a> 
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="home__main bg-light pt-8">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="home__main-section-title col-md-12 mb-4">
+                <h3 class="h6 text-muted">Latest</h3>
+            </div>
+            {% for post in site.posts %}
+            <div class="col-md-12 home__article-wrapper mb-4">
+                <a href="{{ post.url | relative_url }}" class="article-card ml-4">
+                    <article class="bg-white pl-6 pr-4 py-4">
+                        <div class="article-card__icon text-white d-flex justify-content-center align-items-center">
+                            <i class="far fa-newspaper"></i>
+                        </div>
+                        <h4 class="mb-1">{{ post.title | escape }}</h4>
+                        {% if post.description %}
+                        <p>{{ post.description | escape }}</p>
+                        {% endif %}
+                    </article>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</main>

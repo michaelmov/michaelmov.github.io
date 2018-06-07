@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "CSS is More Awesome with SASS"
+description: "Make your CSS more DRY and reusable with the power of SASS."
 date:   2016-02-06
 categories: frontend css sass
 comments: true

@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "AngularJS-like Two-way Data Binding with Vanilla JS"
+description: "How to create simple two-way data binding using plain ole vanilla javascript."
 date:   2018-05-19
 categories: frontend javascript es6
 comments: true
