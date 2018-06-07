@@ -1,10 +1,14 @@
 
 
-// /**
-//  * Created by Michael Movsesov on 2/14/16.
-//  */
+/**
+ * Created by Michael Movsesov on 2/14/16.
+ */
  
 document.addEventListener("DOMContentLoaded", function(){
+    // Init Highlight.js
+    hljs.initHighlightingOnLoad();
+
+    // Header parallax
     window.addEventListener('scroll', function(e) {
         var articleHeroText = document.querySelector('.article__hero-text ');
         var heroHeight = document.querySelector('.article__hero').clientHeight;

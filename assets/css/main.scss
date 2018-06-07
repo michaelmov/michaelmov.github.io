@@ -13,6 +13,11 @@
         "bootstrap/utilities",
         "bootstrap/reboot";
 
+// Syntax highlighting
+@import "highlightjs/default",
+        "highlightjs/atom-one-dark";
+
+
 
 // Bootstrap components
 @import "bootstrap/grid",
@@ -20,7 +25,6 @@
 
 // Base
 @import "base/_typography",
-        "base/_syntax-highlighting",
         "base/_layout";
 
 // Modules
