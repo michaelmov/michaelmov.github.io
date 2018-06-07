@@ -2,24 +2,32 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-// Utilities
-@import 'utilities/mixins';
+@import "base/_fonts",
+        "base/_variables-custom";
 
+
+// Bootstrap core
+@import "bootstrap/functions",
+        "bootstrap/variables",
+        "bootstrap/mixins",
+        "bootstrap/utilities",
+        "bootstrap/reboot";
+
+
+// Bootstrap components
+@import "bootstrap/grid",
+        "bootstrap/type";
 
 // Base
-@import 'base/variables',
-'base/typography',
-'base/syntax-highlighting',
-'base/buttons',
-'base/animations',
-'base/layout';
+@import "base/_typography",
+        "base/_syntax-highlighting",
+        "base/_layout";
 
-// Sections
-@import 'sections/navbar-mobile',
-'sections/sidebar',
-'sections/header',
-'sections/post',
-'sections/page',
-'sections/portfolio',
-'sections/single-portfolio',
-'sections/footer';
+// Modules
+@import "modules/_article-card";
+@import "modules/_footer";
+
+// Layout
+@import "layout/_home",
+        "layout/_article";
+

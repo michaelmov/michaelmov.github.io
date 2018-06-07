@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Native ES6 Module Browser Support Is Here!"
+description: "ES6 module awesomeness is now available in browsers near you."
 featured-image: "/assets/images/es6-modules-browser-featured.jpg"
 date:   2018-05-31
 categories: frontend javascript es6
@@ -18,7 +19,7 @@ Thankfully, browsers have been slowly enabling ES6 features. At the time of this
 ### The How
 To get started, I will create a file called `greeting.js` and export a `Greeting` class from it. This will be our module.
 
-#### greeting.js:
+###### greeting.js:
 ```javascript
 export default class Greeting {
     constructor(greeting) {
@@ -34,7 +35,7 @@ As you see, this is just a class that takes in a greting as a consturctor param 
 
 Now, I am going to create another file called `main.js` that will be the main file that will import our `Greeting` module and bootstrap our mini application:
 
-#### main.js:
+###### main.js:
 ``` javascript
 import Greeting from './greeting.js';
 
@@ -46,7 +47,7 @@ Again, simple stuff. I simply `import` my `Greeting` class, create an instance o
 
 Finally, the exciting part of referencing the above javascript in the `index.html` file. 
 
-#### index.html:
+###### index.html:
 ``` html
 <!DOCTYPE html>
 <html>
@@ -70,11 +71,11 @@ A couple notes:
 That's it! As you see, it is as easy as adding `type="module"` to the `<script>` tag to beging using es6 modules natively in the browser.
 
 
-### Final Words
+###### Final Words
 Native support of ES6 modules is very exciting to me, because it once again allows me to quicky expriment and build in the browser without the hassle of having to set up a compile/build system. It brings back the playful nature of javascript, but most importantly lowers the barrier to entry into the JavaScript world once again :). 
 
 Of course, I am not suggesting the we ditch our build systems and swtich over to native es6 modules. If you are creating production apps, you should be building and minifying your JS code anyway for performance and browser compatibility reasons. 
 
-### Browser Support
+###### Browser Support
 ![ES6 Modules Browser Support](/assets/images/es6-modules-browser-support.png "ES6 Modules Browser Support")
 

@@ -3,9 +3,17 @@
  */
 .highlight {
   background: #fff;
+  font-size: 12px !important;
 
   .highlighter-rouge & {
     background: #404040;
+  }
+}
+
+code {
+  &.highlighter-rouge {
+    background-color: $gray-200;
+    color: $primary-green;
   }
 }
 

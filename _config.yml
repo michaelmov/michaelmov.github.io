@@ -33,8 +33,12 @@ collections:
   portfolio:
     output: true
 # theme: minima
+autoprefixer:
+  browsers:
+  - last 2 versions
 plugins:
   - jekyll-feed
+  - jekyll-autoprefixer
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

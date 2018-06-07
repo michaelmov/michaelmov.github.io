@@ -1,0 +1,56 @@
+// Layout
+$grid-gutter-width: 30px;
+$container-max-width: 960px;
+$container-padding: 3%;
+
+// Typography
+
+$font-family-headings: 'Arvo', serif;
+$font-family-regular: 'Lato', serif;
+$font-family-base: $font-family-regular;
+$font-size-base: 1.125rem; // 18px (Assumes the browser default, typically `16px`)
+$line-height-base: 1.8;
+
+$h1-font-size: $font-size-base * 3;
+$h2-font-size: $font-size-base * 2.5;
+$h3-font-size: $font-size-base * 1.75;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base;
+
+$display1-size: 12rem;
+$display2-size: 5.5rem;
+$display3-size: 4.5rem;
+$display4-size: 3.5rem;
+
+$headings-line-height: 1.2;
+$blockquote-font-size: $font-size-base;
+
+// Colors
+$body-color: rgba(0,0,0,.84);
+$link-color: $body-color;
+$primary-blue: #134E5E;
+$primary-green: #71B280;
+
+$theme-colors: ();
+$theme-colors: map-merge((
+    "primary": $primary-blue,
+    "secondary":  $primary-green,
+), $theme-colors);
+
+
+// Spacing
+
+$spacer: 8px;
+$spacers: (
+    0: 0,
+    1: $spacer,
+    2: ($spacer * 2),
+    3: ($spacer * 3),
+    4: ($spacer * 4),
+    5: ($spacer * 5),
+    6: ($spacer * 6),
+    7: ($spacer * 7),
+    8: ($spacer * 8),
+    12: ($spacer * 12),
+);

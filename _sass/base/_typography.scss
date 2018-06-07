@@ -1,84 +1,25 @@
-body {
-  font-family: $fontStack;
-  font-weight: 400;
-  font-size: 16px;
-  color: $medium-grey;
-  line-height: 2;
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 { 
+    font-family: 'Arvo', sans-serif;
 }
 
-strong {
-  font-weight: 700;
-}
-
-h1, h2 {
-  font-weight: 700;
-  margin: 10px 0 15px 0;
-}
-
-h3, h4, h5, h6 {
-  font-weight: 300;
-}
-
-
-h1 {
-  font-size: 55px;
-
-  @include breakpoint(0, $phone) {
-    font-size: 30px;
-    margin: 10px 0 7px 0;
-  }
-}
-
-h2 {
-  font-size: 34px;
-
-  @include breakpoint(0, $phone) {
-    font-size: 30px;
-    margin: 10px 0 7px 0;
-  }
-}
-
-h3 {
-  font-size: 36px;
-
-  @include breakpoint(0, $phone) {
-    font-size: 24px;
-  }
-}
-
-h4 {
-  font-size: 24px;
-}
-
-h5 {
-  font-size: 18px;
-}
-
-h6 {
-  font-size: 14px;
-}
-
-
-a {
-  color: $primary-blue;
-
-  &:hover {
-    color: $primary-blue-light;
-    text-decoration: none;
-  }
-
-  &:active {
-    color: $primary-blue-light;
-    text-decoration: none;
-  }
-}
-
-blockquote {
-  font-size: 20px;
-  text-align: center;
-  font-style: italic;
-  padding: 0 40px 0 40px;
-  margin: 40px 0  ;
-  color: $light-grey;
-  border-color: $primary-blue;
+@include media-breakpoint-down(sm) {
+    h1, .h1 {
+        font-size: $font-size-base * 2.75;
+    } 
+    h2, .h2 {
+        font-size: $font-size-base * 2.25;
+    } 
+    h3, .h3 {
+        font-size: $font-size-base * 1.5;
+    } 
+    h4, .h4 {
+        font-size: $font-size-base * 1.25;
+    } 
+    h5, .h5 {
+        font-size: $font-size-base;
+    } 
+    h6, .h6 {
+        font-size: $font-size-base * 0.85;
+    } 
 }

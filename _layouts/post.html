@@ -1,24 +1,22 @@
 ---
 layout: default
 ---
-<script>
-  var categoryArray = [];
-  {% for category in page.categories %}
-   categoryArray.push("{{ category }}");
-  {% endfor %}
-
-  var articleCategories = categoryArray.join(' | ');
-</script>
-
-<div class="inner-wrap scene_element scene_element--fadein">
-  <article class="post">
-    <h2>{{ page.title | escape }}</h2>
-    <div class="post-meta">
-      <time>{{ page.date | date: '%B %d, %Y' }}</time>
+<header class="article__hero d-flex align-items-center justify-content-center text-white">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-12">
+              <h1 class="h2 text-center article__hero-title mb-4">{{ page.title | escape }}</h1>
+              <h2 class="h6 article__hero-date text-uppercase text-center">{{ page.date | date: '%B %d, %Y' }}</h2>
+          </div>
+      </div>
+  </div>
+</header>
+<main class="article__main">
+  <div class="container-fluid">
+      <div class="article__content bg-white px-8 pt-12">
+        <a href="/" class="article__author-avatar" style="background-image: url({{site.url}}/assets/images/michael_movsesov_avatar.jpeg)"></a>
+        {{ content }}
+      </div>
+      {% include disqus_comments.html %}
     </div>
-    <div class="post-content">
-      {{ content }}
-    </div>
-    {% include disqus_comments.html %}
-  </article>
-</div>
+</main>

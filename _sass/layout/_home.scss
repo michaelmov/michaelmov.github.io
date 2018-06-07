@@ -1,0 +1,112 @@
+.home {
+    &__hero {
+        height: 300px;
+        position: relative;
+        background-image: linear-gradient(-134deg, $primary-green 0%, $primary-blue 100%);
+
+
+        &-subtitle {
+            font-family: $font-family-base !important;
+            font-size: 1rem;
+
+            @include media-breakpoint-down(sm) {
+                text-align: center;
+                font-size: 0.8rem;
+            }
+        }
+
+        &-avatar {
+            height: 120px;
+            width: 120px;
+            border-radius: 100%;
+            background-position: top !important;
+            background-repeat: no-repeat !important;
+            background-size: cover !important;
+            border: 6px solid $primary-green;
+            transition: all 0.25s ease-in-out;
+            box-sizing: content-box;
+
+            &:hover {
+                border-width: 9px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                height: 90px;
+                width: 90px;
+            }
+        }
+
+        &-social {
+            i {
+                font-size: 1.8rem;
+            }
+            a {
+                display: inline-block;
+                color: $white;
+                transition: all 0.25s ease-in-out;
+                margin-right: $spacer * 1.5;
+    
+                &:hover {
+                    text-decoration: none;
+                    transform: scale(1.2);
+                }
+            }
+        }
+
+        // &:before {
+        //     background-color: $gray-100;
+        //     content: '';
+        //     display: block;
+        //     height: 50%;
+        //     left: 0;
+        //     position: absolute;
+        //     right: 0;
+        //     z-index: 0;
+        //     -webkit-backface-visibility: hidden; // for Chrome Windows
+        //     bottom: -19%;
+        //     transform: skewY(-2deg);
+        //     transform-origin: 100%;
+
+        //     @include media-breakpoint-down(sm) {
+        //         display: none;
+        //     }
+        // }
+    }
+
+    &__main {
+        position: relative;
+
+        &-section-title {
+            h3 {
+                display: inline;
+                font-family: $font-family-regular;
+                letter-spacing: 1px;
+    
+                &:after {
+                    content: "";
+                    position: absolute;
+                    height: 1px;
+                    left: 90px;
+                    width: 30%;
+                    background-color: $gray-600;
+                    top: 50%;
+                    transform: translateY(-50%);
+
+                    @include media-breakpoint-down(sm) {
+                        width: calc(100% - 106px);
+                    }
+                }
+            }
+            @include media-breakpoint-down(sm) {
+                margin-bottom: $spacer * 7 !important;
+            }
+        }
+    }
+
+    &__article-wrapper {
+        @include media-breakpoint-down(sm) {
+            margin-bottom: $spacer * 7 !important;
+        }
+    }
+    
+}
