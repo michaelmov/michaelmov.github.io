@@ -32,10 +32,18 @@ layout: default
             </div>
             {% for post in site.posts %}
             <div class="col-md-12 home__article-wrapper mb-4">
+                {% if post.is-external %}
+                <a href="{{ post.external-url}}" class="article-card ml-4" target="_blank">
+                {% else %}
                 <a href="{{ post.url | relative_url }}" class="article-card ml-4">
+                {% endif %}
                     <article class="bg-white pl-6 pr-4 py-4">
                         <div class="article-card__icon text-white d-flex justify-content-center align-items-center">
+                            {% if post.icon-class %}
+                            <i class="{{ post.icon-class }}"></i>
+                            {% else %}
                             <i class="far fa-newspaper"></i>
+                            {% endif %}
                         </div>
                         <h4 class="mb-1">{{ post.title | escape }}</h4>
                         {% if post.description %}
