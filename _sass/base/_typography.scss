@@ -27,3 +27,20 @@ h1, h2, h3, h4, h5, h6,
 .hljs {
     font-size: 14px;
 }
+
+blockquote {
+    font-size: 1.7rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: $gray-700;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 1.4rem;
+    }
+
+    p {
+        border-left: 4px solid $primary-green;
+        padding-left: $spacer * 3;
+        padding-right: $spacer * 3;
+    }
+}

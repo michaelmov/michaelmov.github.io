@@ -13,9 +13,11 @@ layout: default
 </header>
 <main class="article__main">
   <div class="container-fluid">
-      <div class="article__content bg-white px-8 pt-12">
+      <div class="article__content bg-white px-4 pt-12">
         <a href="/" class="article__author-avatar" style="background-image: url({{site.url}}/assets/images/michael_movsesov_avatar.jpeg)"></a>
+        <article id="article-wrapper">
         {{ content }}
+        </article>
       </div>
       {% include disqus_comments.html %}
     </div>

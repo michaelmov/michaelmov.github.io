@@ -20,6 +20,14 @@ document.addEventListener("DOMContentLoaded", function(){
         }
         
       });
+
+      // Make all article images 100% width
+      var articleImages = document.querySelectorAll('#article-wrapper img');
+      articleImages.forEach(function(image) { 
+        if(image.parentElement.nodeName === 'P') {
+          image.parentElement.style.width = '100%';
+        }
+      });
 });
 
 

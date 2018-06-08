@@ -71,11 +71,11 @@ A couple notes:
 That's it! As you see, it is as easy as adding `type="module"` to the `<script>` tag to beging using es6 modules natively in the browser.
 
 
-###### Final Words
+### Final Words
 Native support of ES6 modules is very exciting to me, because it once again allows me to quicky expriment and build in the browser without the hassle of having to set up a compile/build system. It brings back the playful nature of javascript, but most importantly lowers the barrier to entry into the JavaScript world once again :). 
 
 Of course, I am not suggesting the we ditch our build systems and swtich over to native es6 modules. If you are creating production apps, you should be building and minifying your JS code anyway for performance and browser compatibility reasons. 
 
-###### Browser Support
-![ES6 Modules Browser Support](/assets/images/es6-modules-browser-support.png "ES6 Modules Browser Support")
+### Browser Support
+![ES6 Modules Browser Support](/assets/images/es6-modules-browser-support.png "ES6 Modules Browser Support"){:.tofigure}
 
