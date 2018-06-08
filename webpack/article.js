@@ -1,17 +1,14 @@
-
-
-/**
- * Created by Michael Movsesov on 2/14/16.
- */
+import hljs from 'highlight.js';
  
 document.addEventListener("DOMContentLoaded", function(){
+
+    const articleHeroText = document.querySelector('.article__hero-text ');
+    const heroHeight = document.querySelector('.article__hero').clientHeight;
     // Init Highlight.js
     hljs.initHighlightingOnLoad();
 
     // Header parallax
-    window.addEventListener('scroll', function(e) {
-        var articleHeroText = document.querySelector('.article__hero-text ');
-        var heroHeight = document.querySelector('.article__hero').clientHeight;
+    window.addEventListener('scroll', e => {
         var scroll = window.scrollY;
       
         if(scroll <= heroHeight) {
@@ -23,13 +20,10 @@ document.addEventListener("DOMContentLoaded", function(){
 
       // Make all article images 100% width
       var articleImages = document.querySelectorAll('#article-wrapper img');
-      articleImages.forEach(function(image) { 
+      articleImages.forEach(image => { 
         if(image.parentElement.nodeName === 'P') {
           image.parentElement.style.width = '100%';
         }
       });
 });
-
-
-
 
