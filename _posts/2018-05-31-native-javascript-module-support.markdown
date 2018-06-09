@@ -2,7 +2,7 @@
 layout: post
 title:  "Native ES6 Module Browser Support Is Here!"
 description: "ES6 module awesomeness is now available in browsers near you."
-hero-image: "/assets/images/clement-h-544786-unsplash.jpg"
+hero-image: "/assets/images/es6-modules-browser-support-hero.jpg"
 og-image: "/assets/images/es6-modules-browser-featured.jpg"
 date:   2018-05-31
 categories: frontend javascript es6
