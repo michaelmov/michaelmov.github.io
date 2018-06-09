@@ -2,8 +2,10 @@ import hljs from 'highlight.js';
  
 document.addEventListener("DOMContentLoaded", function(){
 
+    const articleHeroSection = document.querySelector('.article__hero');
     const articleHeroText = document.querySelector('.article__hero-text ');
-    const heroHeight = document.querySelector('.article__hero').clientHeight;
+    const heroHeight = articleHeroSection.clientHeight;
+
     // Init Highlight.js
     hljs.initHighlightingOnLoad();
 
@@ -12,8 +14,8 @@ document.addEventListener("DOMContentLoaded", function(){
         var scroll = window.scrollY;
       
         if(scroll <= heroHeight) {
-          articleHeroText.style.transform = 'translate(0px, ' + (scroll/4) + '%)';
-          articleHeroText.style.opacity = 1 - scroll / 250;
+          articleHeroText.style.transform = `translate(0px, ${scroll/4}%)`;
+          articleHeroText.style.opacity = 1 - scroll / 250;    
         }
         
       });
@@ -26,4 +28,4 @@ document.addEventListener("DOMContentLoaded", function(){
         }
       });
 });
-
+ 

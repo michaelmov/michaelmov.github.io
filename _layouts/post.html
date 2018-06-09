@@ -1,8 +1,10 @@
 ---
 layout: default
 ---
-<header class="article__hero d-flex align-items-center justify-content-center text-white">
-  <div class="container-fluid">
+{% if page.hero-image %}
+<header class="article__hero d-flex align-items-center justify-content-center text-white" style="background-image: url({{ page.hero-image | escape }})">
+    <div class="article__hero-bg-overlay"></div>
+    <div class="container-fluid">
       <div class="row">
           <div class="col-12 article__hero-text">
               <h1 class="h2 text-center article__hero-title mb-4">{{ page.title | escape }}</h1>
@@ -11,6 +13,18 @@ layout: default
       </div>
   </div>
 </header>
+{% else %}
+<header class="article__hero d-flex align-items-center justify-content-center text-white">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 article__hero-text">
+                <h1 class="h2 text-center article__hero-title mb-4">{{ page.title | escape }}</h1>
+                <h2 class="h6 article__hero-date text-uppercase text-center">{{ page.date | date: '%B %d, %Y' }}</h2>
+            </div>
+        </div>
+    </div>
+</header>
+{% endif %}
 <main class="article__main">
   <div class="container-fluid">
       <div class="article__content bg-white px-4 pt-12">

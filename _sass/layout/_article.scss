@@ -1,11 +1,18 @@
 .article {
     &__hero {
         position: relative;
-        height: 400px;
+        height: 600px;
         position: relative;
         background-image: linear-gradient(-134deg, $primary-green 0%, $primary-blue 100%);
         background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
         overflow: hidden;
+        background-position: center;
+
+        @include media-breakpoint-down(sm) {
+            height: 400px;
+        }
 
         &-title {
             @include media-breakpoint-down(sm) {
@@ -13,8 +20,22 @@
             }
         }
         &-date {
-            margin-bottom: 100px;
+            margin-bottom: 200px;
             font-family: $font-family-regular;
+
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 100px;
+            }
+        }
+
+        &-bg-overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background-color: $black;
+            opacity: 0.5;
         }
 
     }
@@ -29,7 +50,11 @@
 
     &__content {
         position: relative;
-        transform: translateY(-100px);
+        transform: translateY(-200px);
+
+        @include media-breakpoint-down(sm) {
+            transform: translateY(-100px);
+        }
 
         p, ul, ol, h1, h2, h3, h4, h5, h6 {
             margin: 0 auto;
