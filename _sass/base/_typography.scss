@@ -28,6 +28,12 @@ h1, h2, h3, h4, h5, h6,
     font-size: 14px;
 }
 
+code {
+    background-color: $gray-300;
+    color: $primary-green;
+    padding: 0 $spacer/2;
+}
+
 blockquote {
     font-size: 1.7rem;
     font-weight: 600;
