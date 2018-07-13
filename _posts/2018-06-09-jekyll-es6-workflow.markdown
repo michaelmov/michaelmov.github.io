@@ -9,7 +9,11 @@ categories: frontend javascript es6 jekyll webpack
 comments: true
 ---
 
-Everyone knows that Webpack is awesome for bundling JavaScript projects. It has powerful features and is very customizeable. Likewise, Jekyll is an excellent static site generator. In fact, I use Jekyll for this website. Recently, I wanted to use ES6 on my website and realized that Jekyll doesn't bundle JavaScript ES5, so naturally I went straight to Webpack to solve this problem. The steps below outline the process of integrating Webpack into a Jekyll site so that you can bundle ES6 into ES5.
+Everyone knows that Webpack is awesome for bundling JavaScript projects. It has powerful features and is very customizeable. Likewise, Jekyll is an excellent static site generator. In fact, I use Jekyll for this website. Recently, I wanted to use ES6 on my website and realized that Jekyll doesn't bundle JavaScript ES5, so naturally I went straight to Webpack to solve this problem. 
+
+In summary, what we are going to do is compile our ES6 code into an ES5 bundle and place it in Jekyll's main `/assets` directory. Then we will have Jekyll's server watch for changes and reload the page every time it detects a change in our JavaScript code.
+
+The steps below outline the setup process:
 
 ### Initialize NPM
 In the root of your Jekyll project run:
@@ -52,6 +56,89 @@ npm install webpack webpack-cli babel-core babel-loader babel-preset-env --save-
 ```
 
 
+
 ### Add webpack.config.js
+We are going to create a webpack config file and give it instructions about how to bundle our ES6 code:
+
+webpack.config.js:
+``` javascript
+const path = require('path');
+
+
+module.exports = {
+  mode: 'production',
+  watch: true,
+  entry: path.join(__dirname, 'webpack', 'main'),
+  output: {
+    filename: '[name]-bundle.js',
+    path: path.resolve(__dirname, 'assets/js')
+  },
+  module: {
+    rules: [{
+      test: /.js$/,
+      exclude: [
+        path.resolve(__dirname, 'node_modules'),
+        path.resolve(__dirname, 'bower_components')
+      ],
+      loader: 'babel-loader',
+      query: {
+        presets: ["env"]
+      }
+    }]
+  },
+  resolve: {
+    extensions: ['.json', '.js', '.jsx']
+  }
+};
+```
+
+This config file is very basic and simply compiles our `main.js` file into an ES5 bundle, names is `main-bundle.js` and places it in Jekyll's default `/assets/js` directory form which our javascript file will be served.
+
 
 ### Update package.json
+The last step of this process, is to let Jekyll's local dev server know when javascript is changes so that it can automatically reload the page during development. To achieve this, we first have to fire up Webpack and then simultaneously start Jekyll server with live reload. We can do this with the following command:
+
+
+``` bash
+./node_modules/.bin/webpack --watch | bundle exec jekyll serve --livereload --incremental
+```
+
+As you see, that is a long command to have to remember and type in every single time we want to run our site locally, so to make our life easier, we will add it to our `package.json` scripts like so that we can simply start our local dev server with `npm start`
+
+package.json:
+``` javascript
+{
+  "name": "michaelmov.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/webpack --watch | bundle exec jekyll serve --livereload --incremental",
+    "build": "./node_modules/.bin/webpack | bundle exec jekyll build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelmov/michaelmov.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michaelmov/michaelmov.github.io/issues"
+  },
+  "homepage": "https://github.com/michaelmov/michaelmov.github.io#readme",
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.5"
+  },
+  "dependencies": {
+    "highlight.js": "^9.12.0"
+  }
+}
+```
+
+
+### Enjoy!
+That's it! With just a few simple steps, we can now take full advantage of JavaScripts powerful ES6 features on our Jekyll site.
