@@ -15,9 +15,9 @@
             background-attachment: scroll;
         }
 
-        &-text {
-            transition: all 0.6s ease-out;
-        }
+        // &-text {
+        //     transition: all 0.6s ease-out;
+        // }
 
         &-title {
             @include media-breakpoint-down(sm) {
