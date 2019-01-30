@@ -14,15 +14,15 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Michael Movsesov
-subtitle: "Front-End Engineer | Thinker | Problem Solver"
+subtitle: 'UX/UI Engineer | Problem Solver'
 email: your-email@domain.com
-description: Front-End Engineer
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+description: UX/UI Engineer
+baseurl: '' # the subpath of your site, e.g. /blog
+url: '' # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
-github_username:  jekyll
+github_username: jekyll
 disqus:
-  shortname: michaelmovsesov
+    shortname: michaelmovsesov
 google_analytics: UA-74351809-1
 google_tag_manager: GTM-M3842PX
 
@@ -30,28 +30,28 @@ google_tag_manager: GTM-M3842PX
 markdown: kramdown
 permalink: /articles/:title
 collections:
-  portfolio:
-    output: true
+    portfolio:
+        output: true
 # theme: minima
 autoprefixer:
-  browsers:
-  - last 2 versions
+    browsers:
+        - last 2 versions
 plugins:
-  - jekyll-feed
-  - jekyll-autoprefixer
+    - jekyll-feed
+    - jekyll-autoprefixer
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
 exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
-  - webpack.config.js
-  - package.json
-  - package-lock.json
-  - webpack
+    - Gemfile
+    - Gemfile.lock
+    - node_modules
+    - vendor/bundle/
+    - vendor/cache/
+    - vendor/gems/
+    - vendor/ruby/
+    - webpack.config.js
+    - package.json
+    - package-lock.json
+    - webpack
