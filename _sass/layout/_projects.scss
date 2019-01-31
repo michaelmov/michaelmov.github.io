@@ -1,0 +1,61 @@
+.projects {
+    &__hero {
+        @extend .home__hero !optional;
+        height: 200px !important;
+
+        &-title {
+            @extend .home__hero-title !optional;
+        }
+
+        &-subtitle {
+            @extend .home__hero-subtitle !optional;
+        }
+
+        &-avatar {
+            @extend .article__author-avatar !optional;
+            top: auto;
+            bottom: -50px;
+            border-color: $gray-100;
+        }
+    }
+
+    &__main-section-title {
+        @extend .home__main-section-title !optional;
+    }
+
+    &__about {
+        &-quote {
+            font-size: 2.5rem;
+            font-family: $font-family-headings;
+            margin-top: -9rem;
+            
+            @include media-breakpoint-down(md) {
+                margin-top: 0;
+            }
+        }
+
+        p {
+            a {
+                @include link-style;
+            }
+        }
+
+
+        &-social {
+            i {
+                font-size: 1.8rem;
+            }
+            a {
+                display: inline-block;
+                color: $gray-700;
+                transition: all 0.25s ease-in-out;
+                margin-right: $spacer * 1.5;
+    
+                &:hover {
+                    text-decoration: none;
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+}
