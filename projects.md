@@ -2,11 +2,11 @@
 title: Michael Movsesov - Projects
 layout: projects
 permalink: '/projects/'
-quote: 'Design is my muse. Code is my medium'
 ---
 
+>"Design is my muse. Code is my medium"
 
-I am a UX/UI Engineer who specializes in the craft of design implementation. With every project,  my goal is to  bridge the gap between design and engineering and ensure that what ends up in the hands of users is a faithful representation of the design vision.
+I am a UX/UI Engineer who specializes in the craft of design implementation. For every project,  my goal is to  bridge the gap between design and engineering and ensure that what ends up in the hands of users is a faithful representation of the design vision.
 
 
 With experience in both design and front-end development, I bring an engineer’s pattern thinking to systematizing designs and a designer’s eye for fit and finish and empathy for a user’s needs.

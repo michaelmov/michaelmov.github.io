@@ -18,51 +18,58 @@ layout: default
             <div class="projects__main-section-title col-md-12 mb-4 pl-0">
                 <h3 class="h6 text-muted">Hello :)</h3>
             </div>
-            <div class="row bg-white py-6 px-5">
-                <div class="col-12 col-md-6">
-                    {{ content }}
-                    <div class="projects__about-social mt-6">
-                        <a href="https://github.com/michaelmov" target="_blank"><i class="fab fa-github"></i></a> 
-                        <a href="https://codepen.io/michaelmov/" target="_blank"><i class="fab fa-codepen"></i></a> 
-                        <a href="https://www.linkedin.com/in/michaelmov" target="_blank"><i class="fab fa-linkedin"></i></a> 
-                        <a href="https://twitter.com/MichaelMov" target="_blank"><i class="fab fa-twitter"></i></a> 
-                        <a href="mailto:michael.movsesov@gmail.com" target="_blank"><i class="far fa-envelope"></i></a> 
+            <div class="projects__about-card">
+                <div class="row">
+                    <div class="col-12">
+                        {{ content }}
+                        <div class="projects__about-social mt-6">
+                            <a href="https://github.com/michaelmov" target="_blank"><i class="fab fa-github"></i></a> 
+                            <a href="https://codepen.io/michaelmov/" target="_blank"><i class="fab fa-codepen"></i></a> 
+                            <a href="https://www.linkedin.com/in/michaelmov" target="_blank"><i class="fab fa-linkedin"></i></a> 
+                            <a href="https://twitter.com/MichaelMov" target="_blank"><i class="fab fa-twitter"></i></a> 
+                            <a href="mailto:michael.movsesov@gmail.com" target="_blank"><i class="far fa-envelope"></i></a> 
+                        </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 d-flex align-items-center">
-                    <blockquote class="projects__about-quote ml-3">
-                        <p class="pr-0">"{{ page.quote }}"</p>
-                    </blockquote>
+            </div>
+        </div>
+    </section>
+    <section class="projects__list mt-8">
+        <div class="container-fluid">
+            <div class="projects__main-section-title col-md-12 mb-4 pl-0">
+                <h3 class="h6 text-muted">Projects</h3>
+            </div>
+            <div class="row">
+                {% for project in site.projects %}
+                <div class="col-12 mb-4">
+                    <a href="{{ project.url | relative_url }}" class="article-card">
+                        <article class="bg-white projects__list-card row m-0">
+                            {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+                            {% if thecycle == 'odd' %}
+                            <div class="projects__list-card-image col-12 col-md-6 p-0">
+                                <div class="projects__list-card-image-inner" style="background-image: url('{{ site.url }}/{{ project.thumbnail }}')"></div>
+                            </div>
+                            <div class="projects__list-card-info col-12 col-md-6 p-3">
+                                <h4 class="mb-2">{{ project.title | escape }}</h4>
+                                <p class="d-none d-lg-block">{{ project.description | escape }}</p>
+                                <img class="projects__list-card-logo" src="{{ site.url }}/{{project.logo}}">
+                            </div>
+                            {% else %}
+                            <div class="projects__list-card-image col-12 order-md-12 col-md-6 p-0">
+                                <div class="projects__list-card-image-inner" style="background-image: url('{{ site.url }}/{{ project.thumbnail }}')"></div>
+                            </div>
+                            <div class="projects__list-card-info col-12 order-md-1 col-md-6 p-3">
+                                <h4 class="mb-2">{{ project.title | escape }}</h4>
+                                <p class="d-none d-lg-block">{{ project.description| escape }}</p>
+                                <img class="projects__list-card-logo" src="{{ site.url }}/{{project.logo}}">
+                            </div>
+                            {% endif %}
+                        </article>
+                    </a>
                 </div>
+                {% endfor %}
             </div>
         </div>
     </section>
 </main>
 
-<!-- <div class="inner-wrap scene_element scene_element--fadein">
-    <div class="page-header">
-        <h3 class="page-header-title">Portfolio</h3>
-    </div>
-    {% for project in site.portfolio %}
-    <article class="projects">
-        <div class="row">
-            <div class="col-md-5">
-                <img class="project-thumbnail" src="{{ site.url }}/{{ project.thumbnail }}" alt="">
-                <a href="{{ project.live }}" target="_blank"><i class="fa fa-globe"></i> Live</a> |
-                <a href="{{ project.source }}" target="_blank"><i class="fa fa-github"></i> Source Code</a>
-            </div>
-            <div class="col-md-7">
-                <h2>{{ project.title | escape }}</h2>
-                <div class="project-meta">
-                    {% for category in project.categories %}
-                    <span>{{ category }}<span>{% unless forloop.last %},{% endunless %}
-                    {% endfor %}
-                </div>
-                <div class="project-content">
-                    {{ project.content }}
-                </div>
-            </div>
-        </div>
-    </article>
-    {% endfor %}
-</div> -->

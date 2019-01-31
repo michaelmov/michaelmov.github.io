@@ -14,9 +14,11 @@
     }
 
     &:hover {
-        text-decoration: none;
-        transform: translateY(-10px);
-        box-shadow: 0px 30px 50px -17px rgba(0, 0, 0, 0.3), 0px 3px 20px rgba(0, 0, 0, 0.1)
+        @include card-raise;
+
+        .projects__list-card-image-inner {
+            transform: scale(1.1);
+        }
     }
 
     &__icon {

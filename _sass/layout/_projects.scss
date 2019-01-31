@@ -1,4 +1,8 @@
 .projects {
+
+    &__main {
+        overflow-x: hidden;
+    }
     &__hero {
         @extend .home__hero !optional;
         height: 200px !important;
@@ -27,7 +31,6 @@
         &-quote {
             font-size: 2.5rem;
             font-family: $font-family-headings;
-            margin-top: -9rem;
             
             @include media-breakpoint-down(md) {
                 margin-top: 0;
@@ -55,6 +58,53 @@
                     text-decoration: none;
                     transform: scale(1.2);
                 }
+            }
+        }
+    }
+
+    &__list {
+        article {
+            height: 300px;
+
+            @include media-breakpoint-down(sm) {
+                padding-top: 0 !important;
+                height: auto;
+            }
+        }
+
+        &-card {
+            &-image {
+                height: 100%;
+                position: relative;
+                overflow: hidden;
+                @include media-breakpoint-down(sm) {
+                    height: 200px;
+                }
+
+                &-inner {
+                    height: 100%;
+                    width: 100%;
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    transition: all 0.75s ease;
+                }
+            }
+
+            &-info {
+                height: 100%;
+
+                @include media-breakpoint-down(sm) {
+                    min-height: 160px;
+                }
+            }
+
+            &-logo {
+                height: 8%;
+                display: block;
+                position: absolute;
+                right: $spacer * 4;
+                bottom: $spacer * 4;
             }
         }
     }
