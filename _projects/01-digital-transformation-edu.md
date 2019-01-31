@@ -11,7 +11,7 @@ live: "https://discover.microsoft.com/discover-digital-transformation-edu/"
 ---
 
 ##### Description
-As part of Microsoft's Global Engagement Program campaign, our team at Indigo Slate created a series of e-books to showcase how Microsoft's products and services transform classrooms accross the country. In addition to the e-books, the team at Microsoft wanted an interactive website that would be a mini version of the e-books. 
+As part of Microsoft's Global Engagement Program campaign, our team at Indigo Slate created a series of e-books to showcase how Microsoft's products and services transform classrooms across the country. In addition to the e-books, the team at Microsoft wanted an interactive website that would serve a mini version of the e-books. 
 
 ![Digital Transformation in Education](assets/../../assets/images/gep-edu-1.jpg "Digital Transformation in Education")
 
