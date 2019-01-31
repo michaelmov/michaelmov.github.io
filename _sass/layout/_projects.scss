@@ -1,5 +1,4 @@
 .projects {
-
     &__main {
         overflow-x: hidden;
     }
@@ -107,5 +106,27 @@
                 bottom: $spacer * 4;
             }
         }
+    }
+}
+
+.project {
+
+    &__hero {
+        .article__hero-text {
+            transform: translateY(-70px);
+        }
+    }
+    &__main {
+        &-logo {
+           margin: 0 !important; 
+           height: 2rem !important;
+
+        }
+        .article {
+            &__content {
+                transform: translateY(-150px);
+            }
+        }
+
     }
 }

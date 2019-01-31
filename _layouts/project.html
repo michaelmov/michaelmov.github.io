@@ -1,0 +1,50 @@
+---
+layout: default
+---
+{% if page.hero-image %}
+<header class="project__hero article__hero d-flex align-items-center justify-content-center text-white" style="background-image: url('{{site.url}}/{{page.hero-image | escape }}')">
+    <div class="article__hero-bg-overlay"></div>
+    <div class="container-fluid">
+      <div class="row">
+          <div class="col-12 article__hero-text d-flex flex-column align-items-center">
+              <h1 class="h2 text-center article__hero-title mb-4">{{ page.title | escape }}</h1>
+              <a class="d-block" href="{{ page.live }}" target="_blank">
+                <button class="btn btn-invert">{{ page.live-text }}</button>
+              </a>
+          </div>
+      </div>
+  </div>
+</header>
+{% else %}
+<header class="project__hero article__hero d-flex align-items-center justify-content-center text-white">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 article__hero-text d-flex flex-column align-items-center">
+                <h1 class="h2 text-center article__hero-title mb-4">{{ page.title | escape }}</h1>
+                <a class="d-block" href="{{ page.live }}" target="_blank">
+                    <button class="btn btn-invert">{{ page.live-text }}</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+{% endif %}
+<main class="article__main project__main">
+  <div class="container-fluid">
+      <div class="article__content bg-white px-4 py-8">
+        <article id="article-wrapper">
+        <p>
+            <a href="/projects">Back to Projects</a>
+        </p>
+        <h5 class="mb-2">Client</h5>
+        <p>
+            <img class="project__main-logo" src="{{ site.url }}/{{page.logo}}" alt="">
+        </p>
+        {{ content }}
+        <p>
+            <a href="/projects">Back to Projects</a>
+        </p>
+        </article>
+      </div>
+    </div>
+</main>

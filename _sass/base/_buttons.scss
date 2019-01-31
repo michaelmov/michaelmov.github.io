@@ -1,0 +1,19 @@
+.btn {
+    background-color: $primary-green;
+    color: $white;
+    border: 1px solid $primary-green;
+    padding: $spacer $spacer*3;
+    border-radius: 1px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+
+    &-invert {
+        background-color: transparent !important;
+        border-color: $white;
+
+        &:hover {
+            background-color: $white !important;
+            color: $black;
+        }
+    }
+}

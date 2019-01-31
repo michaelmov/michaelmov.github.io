@@ -60,18 +60,28 @@
             transform: translateY(-100px);
         }
 
-        p,
-        ul,
-        ol,
+
         h1,
         h2,
         h3,
         h4,
         h5,
         h6 {
-            margin: 0 auto;
+            margin: $spacer * 5 auto  0 auto;
             width: 80%;
-            margin-bottom: $spacer * 3;
+            a {
+               @include link-style;
+            }
+
+            @include media-breakpoint-down(sm) {
+                width: 100%;
+            }
+        }
+        p,
+        ul,
+        ol,{
+            margin: $spacer auto $spacer*2 auto;
+            width: 80%;
             a {
                @include link-style;
             }
@@ -90,7 +100,7 @@
             max-width: 100%;
             height: auto;
             display: block;
-            margin: 0 auto;
+            margin: $spacer*6 auto;
         }
 
         @include media-breakpoint-down(sm) {
